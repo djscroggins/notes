@@ -2,6 +2,8 @@
 
 ## General Intro To Azure Services
 
+*NB*: Unless otherwise indicated, all service names can be prefaced with "Azure" e.g. Queue Storage is "Azure Queue Storage"
+
 - What is cloud computing?
   - Services: compute power, storage, networking, analytics
     - Compute Approaches
@@ -60,7 +62,9 @@
   - 1+ Physically separate datacenter within Azure region
   - Min three withing region
   - _Isolation Boundaries_
+
   ![Availability Zones](./azure-images/availability-zones.png)
+
   - Not all regions support
   - *Primarily for* VMs, managed disks, load balancers, and SQL databases
     - *Zonal services*: resource pinned to zone
@@ -68,10 +72,13 @@
 - Region pairs
   - At least 300 miles away
   - Geographical replication
+
 ![Region Pairs](./azure-images/region-pairs.png)
+
 - Service-level Agreements
   - *Performance Targets*
   - *Uptime and Connectivity Guarantees*
+
   ![Connectivity](./azure-images/connectivity.png)
 
   - *Service Credits*
@@ -95,14 +102,18 @@
     - Pay-As-You-Go
     - Enterprise
     - Student
+
   ![Subscriptions](./azure-images/subscriptions.png)
+
   - Single bill generated for each subscription monthly
 - Transferring Subscriptions between Accounts
   - "If you transfer a subscription to a new Azure AD tenant, all role assignments in RBAC will be permanently deleted from the source tenant and not migrated to the target tenant."
 - Authenticate Access with Azure AD
-  - *Tenant*: dedicated, isolated instance of Azure AD ownee and managed by an organization (org could be individuals, teams, companies etc)
+  - *Tenant*: dedicated, isolated instance of Azure AD owner and managed by an organization (org could be individuals, teams, companies etc)
     - Tenants and subscriptions o have *one-to-many* relationship
+
     ![Tenant Subscription Relationship](./azure-images/tenant-subscription-relationship.png)
+
 - [Support Options](https://docs.microsoft.com/en-us/learn/modules/create-an-azure-account/6-support-options)
 
 
@@ -129,12 +140,15 @@
     - *Availability sets*
       - Logical grouping of 2+ VMs
       - Keeps available for planned or unplanned maintenance 
+
       ![Availability Sets](./azure-images/availability-sets.png)
     - *Virtual Machine Scale Sets*
           - Group of identical, load balanced VMs
     - *Azure Batch*
           - Enables large-scaled job scheduling and compugted managements with a pool of VMs
+
         ![Azure Batch](./azure-images/azure-batch.png)
+
 - Containers
   - Azure Container Instances (ACI)
   - Azure Kubernetes Service (AKS)
@@ -154,3 +168,26 @@
     - Azure Logic Apps (codeless; designed in web-based designer)
 
 ## Data Storage
+
+- [Summary](https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure/6-summary)
+- Services
+  - *SQL Database*: relational database as a service
+  - *Cosmos DB*: schema-less
+  - *Blob storage*: unstructured i.e. no restrictions on type of data
+  - *Data Lake Storage*: "combines the scalability and cost benefits of object storage with the reliability and performance of the Big Data file system capabilities"
+
+  ![Azure Data Lake](./azure-images/data-lake-storage.png)
+
+  - *Files*: file shares accessible via Server Message Block (SMB) protocol
+  - *Queue Storage*: can store large number of messages for asynchronous message queuing
+  - *Disk Storage*
+- Tiers
+  - *Hot*: frequent
+  - *Cool*: infrequent (stored for at least 30 days)
+  - *Archive*: rarely (stored for at least 180 days; flexible latency requirements)
+- Encryption
+  - Storage Service Encryption - data at rest
+  - Client-side encryption: Azure stores previously encrypted data at rest; decrypted during retrieval
+- [On Prem vs Cloud Storage](https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure/4-comparison-azure-and-on-prem-storage)
+
+  ![On Prem Vs Cloud Storage](./azure-images/on-prem-vs-azure-storage.png)
