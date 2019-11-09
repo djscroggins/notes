@@ -51,7 +51,7 @@
 - [Summary](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/9-summary)
 - Global Azure Services: Microsoft Azure Active Directory, Microsoft Azure Traffic Manager, Azure DNS
 - Special regions
-  - US DoD Central, US Gov Virginia, US Gov Iowa etc. 
+  - US DoD Central, US Gov Virginia, US Gov Iowa etc.
     - For government agencies
   - China East, China North
     - Not directly maintained by Microsoft
@@ -59,7 +59,7 @@
   - Defined by geopolitical boundaries or country borders (data residency, sovereignty and compliance honored)
   - Fault tolerant; can withstand complete region failure
 - Availability Zones
-  - 1+ Physically separate datacenter within Azure region
+  - 1+ Physically separate data center within Azure region
   - Min three withing region
   - _Isolation Boundaries_
 
@@ -68,7 +68,7 @@
   - Not all regions support
   - *Primarily for* VMs, managed disks, load balancers, and SQL databases
     - *Zonal services*: resource pinned to zone
-    - *Zone-redunant services*: platform replicates across zones
+    - *Zone-redundant services*: platform replicates across zones
 - Region pairs
   - At least 300 miles away
   - Geographical replication
@@ -90,7 +90,6 @@
     - Ability to recover from failure
     - *Failure Mode Analysis*: process to identify points of failure and needed response
   - Availability
-
 
 ## Azure Account Overview
 
@@ -116,7 +115,6 @@
 
 - [Support Options](https://docs.microsoft.com/en-us/learn/modules/create-an-azure-account/6-support-options)
 
-
 ## Manage Services with the Azure portal
 
 - [Summary](https://docs.microsoft.com/en-us/learn/modules/tour-azure-portal/9-summary)
@@ -139,13 +137,13 @@
   - Scaling
     - *Availability sets*
       - Logical grouping of 2+ VMs
-      - Keeps available for planned or unplanned maintenance 
+      - Keeps available for planned or unplanned maintenance
 
       ![Availability Sets](./azure-images/availability-sets.png)
     - *Virtual Machine Scale Sets*
           - Group of identical, load balanced VMs
     - *Azure Batch*
-          - Enables large-scaled job scheduling and compugted managements with a pool of VMs
+          - Enables large-scaled job scheduling and compute management with a pool of VMs
 
         ![Azure Batch](./azure-images/azure-batch.png)
 
