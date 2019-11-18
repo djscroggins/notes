@@ -217,7 +217,30 @@
 - [Shared Responsibility](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/2-shared-responsibility)
 
   ![Share Security Responsibility](./azure-images/security-shared-responsibility.png)
+  
 - Defense in depth
 
   ![Defense in depth](./azure-images/defense-in-depth.png)
 
+- Azure certificates
+  - Service Certs
+  - Management Certs
+  - Azure Key Vault
+    - Above and beyond typical certificate management
+      - You can create certificates in Key Vault, or import existing certificates
+      - You can securely store and manage certificates without interaction with private key material.
+      - You can create a policy that directs Key Vault to manage the life-cycle of a certificate.
+      - You can provide contact information for notification about life-cycle events of expiration and renewal of certificate.
+      - You can automatically renew certificates with selected issuers - Key Vault partner x509 certificate providers / certificate authorities.
+
+- Protect yo' Network
+  - Firewalls
+    - *Azure Firewall*
+      - Managed, cloud services to protect VN resources
+      - Stateful
+      - Non-HTTP/S protocols (RDP, SSH, FTP etc.)
+      - Outbound network-level protection for all ports and protocols
+      - Application-level protection for outbound HTTP/S
+    - *Azure Application Gateway*: load balancer that includes Web Application Firewall (designed for HTTP)
+    - *Network virtual appliances*: similar to hardware firewall appliances (ideal for non-HTTP)
+  
