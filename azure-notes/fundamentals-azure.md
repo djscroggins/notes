@@ -243,4 +243,24 @@
       - Application-level protection for outbound HTTP/S
     - *Azure Application Gateway*: load balancer that includes Web Application Firewall (designed for HTTP)
     - *Network virtual appliances*: similar to hardware firewall appliances (ideal for non-HTTP)
-  
+
+- Azure DDos Protection
+  - Basic
+    - Auto-enabled
+    - Traffic monitoring
+    - mitigation of common network-level attacks
+  - Standard
+    - Additional mitigation tuned to Virtual Network resources
+    - Volumetric attacks
+    - Protocol attacks
+    - Resource attacks
+
+- Internal Security
+  - Network Security Groups
+    - filter by source/destination IP, port, protocol
+    - List allowed/denied communication
+  - VPNs
+    - Commonly used to establish secure communication channels for on-prem connections
+    - *Azure ExpressRoute*
+      - Provides dedicated, private connection
+      - Extend on-premises networks into cloud
