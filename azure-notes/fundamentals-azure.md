@@ -189,3 +189,35 @@
 - [On Prem vs Cloud Storage](https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure/4-comparison-azure-and-on-prem-storage)
 
   ![On Prem Vs Cloud Storage](./azure-images/on-prem-vs-azure-storage.png)
+
+## Networking Options
+
+- *Azure Region*: one or more data centers within a specific geographical location
+- *Virtual Network*: logically isolated network; can be segmented into sub-nets
+- *Network Security Group*: allows/denies inbound network traffic
+- *Load Balancer*
+- *Application Gateway: load balancer designed for web applications i.e. all your traffic is HTTP
+  - Uses Load Balancer at the TCP level
+  ![Application Gateway Benefits](./azure-images/application-gateway-benefits.png)
+  - Content Delivery Network (CDN): distributed network of servers that can efficiently deliver web content to users
+- *DNS*: you can bring your own sever or use Azure DNS
+- *Azure Traffic Manager*
+  - How does one deal with latency for geographically remote users?
+  - Scale out with exact copies
+  - Traffic Manager
+    - Traffic Manager uses closest DNS server
+    - Can also connect to on-prem deployments
+    - *Load Balancer* vs *Traffic Manager*
+      - Load balancer distributes traffic *within same region*
+      - Traffic managers works at DNS level *directs client to preferred endpoint*
+      - Load balancers are intra-region, Traffic managers are inter-region
+
+## Security, responsibility, and trust in Azure
+
+- [Shared Responsibility](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/2-shared-responsibility)
+
+  ![Share Security Responsibility](./azure-images/security-shared-responsibility.png)
+- Defense in depth
+
+  ![Defense in depth](./azure-images/defense-in-depth.png)
+
