@@ -214,6 +214,8 @@
 
 ## Security, responsibility, and trust in Azure
 
+-[Summary](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/8-summary))
+
 - [Shared Responsibility](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/2-shared-responsibility)
 
   ![Share Security Responsibility](./azure-images/security-shared-responsibility.png)
@@ -264,3 +266,12 @@
     - *Azure ExpressRoute*
       - Provides dedicated, private connection
       - Extend on-premises networks into cloud
+
+- Azure Information Protection
+  - Helps orgs classify and protect documents and emails with labels
+
+- Advanced Threat Protection
+  - Cloud security solution
+  - Identifies, detects security leaks, malicious attacks, etc.
+
+- [Microsoft Security Development Lifecycle](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/7a-microsoft-sdl)
