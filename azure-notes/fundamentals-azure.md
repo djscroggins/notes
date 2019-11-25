@@ -190,6 +190,58 @@
 
   ![On Prem Vs Cloud Storage](./azure-images/on-prem-vs-azure-storage.png)
 
+
+## Security, responsibility, and trust in Azure
+
+- Azure Active Directory
+  - Cloud-based identity service
+  - Provides:
+    - Authentication
+    - Single-Sign-On
+    - Application management
+    - Business to business identity services
+    - Device management
+  - Service identities
+    - Definitions
+      - *identity*: thing that can be authenticated
+      - *principal*: an identity acting within certain roles or claims
+    - Service principals
+      - Identity used by a service or application (similar to using 'sudo' in Bash)
+    - Managed identities
+      - Creates account in org's Active Directory
+      - Azure infra takes care of authenticating service and managing account
+      - Can be used like any other account
+    - Role-based access control
+      - Mapped to identities through group membership
+
+      ![Resource Management Hierarchy](./azure-images/resource-manager-hierarchy.png)
+
+    - AD Privileged Identity Management
+  - Encryption
+    - Encryption at rest
+      - Stored data
+    - Encryption in transit
+  - Azure Encryption
+    - Azure Storage Service Encryption (data at rest)
+    - Azure Disk Encryption
+      - Service for encryptions Windows/Linux vm disks
+  - Transparent data encryption
+    - Helps protect SQL db and Data Warehouse 
+    - Real-time encryption and decryption of db, backups and log files
+    - Enabled by default for SQL db
+    - Keys
+      - Default: symmetric key; unique key per logical SQL server
+      - BYOK supported with Azure Key Vault
+  - Azure Key Vault
+    - Scenarios
+      - *Secrets management*
+      - *Key Management*
+      - *Certificate Management*
+      - *Hardware security module secrets*
+
+
+      
+
 ## Networking Options
 
 - *Azure Region*: one or more data centers within a specific geographical location
