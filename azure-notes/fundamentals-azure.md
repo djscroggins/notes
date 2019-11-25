@@ -241,3 +241,89 @@
 
 
       
+
+## Networking Options
+
+- *Azure Region*: one or more data centers within a specific geographical location
+- *Virtual Network*: logically isolated network; can be segmented into sub-nets
+- *Network Security Group*: allows/denies inbound network traffic
+- *Load Balancer*
+- *Application Gateway: load balancer designed for web applications i.e. all your traffic is HTTP
+  - Uses Load Balancer at the TCP level
+  ![Application Gateway Benefits](./azure-images/application-gateway-benefits.png)
+  - Content Delivery Network (CDN): distributed network of servers that can efficiently deliver web content to users
+- *DNS*: you can bring your own sever or use Azure DNS
+- *Azure Traffic Manager*
+  - How does one deal with latency for geographically remote users?
+  - Scale out with exact copies
+  - Traffic Manager
+    - Traffic Manager uses closest DNS server
+    - Can also connect to on-prem deployments
+    - *Load Balancer* vs *Traffic Manager*
+      - Load balancer distributes traffic *within same region*
+      - Traffic managers works at DNS level *directs client to preferred endpoint*
+      - Load balancers are intra-region, Traffic managers are inter-region
+
+## Security, responsibility, and trust in Azure
+
+-[Summary](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/8-summary))
+
+- [Shared Responsibility](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/2-shared-responsibility)
+
+  ![Share Security Responsibility](./azure-images/security-shared-responsibility.png)
+  
+- Defense in depth
+
+  ![Defense in depth](./azure-images/defense-in-depth.png)
+
+- Azure certificates
+  - Service Certs
+  - Management Certs
+  - Azure Key Vault
+    - Above and beyond typical certificate management
+      - You can create certificates in Key Vault, or import existing certificates
+      - You can securely store and manage certificates without interaction with private key material.
+      - You can create a policy that directs Key Vault to manage the life-cycle of a certificate.
+      - You can provide contact information for notification about life-cycle events of expiration and renewal of certificate.
+      - You can automatically renew certificates with selected issuers - Key Vault partner x509 certificate providers / certificate authorities.
+
+- Protect yo' Network
+  - Firewalls
+    - *Azure Firewall*
+      - Managed, cloud services to protect VN resources
+      - Stateful
+      - Non-HTTP/S protocols (RDP, SSH, FTP etc.)
+      - Outbound network-level protection for all ports and protocols
+      - Application-level protection for outbound HTTP/S
+    - *Azure Application Gateway*: load balancer that includes Web Application Firewall (designed for HTTP)
+    - *Network virtual appliances*: similar to hardware firewall appliances (ideal for non-HTTP)
+
+- Azure DDos Protection
+  - Basic
+    - Auto-enabled
+    - Traffic monitoring
+    - mitigation of common network-level attacks
+  - Standard
+    - Additional mitigation tuned to Virtual Network resources
+    - Volumetric attacks
+    - Protocol attacks
+    - Resource attacks
+
+- Internal Security
+  - Network Security Groups
+    - filter by source/destination IP, port, protocol
+    - List allowed/denied communication
+  - VPNs
+    - Commonly used to establish secure communication channels for on-prem connections
+    - *Azure ExpressRoute*
+      - Provides dedicated, private connection
+      - Extend on-premises networks into cloud
+
+- Azure Information Protection
+  - Helps orgs classify and protect documents and emails with labels
+
+- Advanced Threat Protection
+  - Cloud security solution
+  - Identifies, detects security leaks, malicious attacks, etc.
+
+- [Microsoft Security Development Lifecycle](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/7a-microsoft-sdl)
